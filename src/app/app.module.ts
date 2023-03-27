@@ -6,18 +6,27 @@ import { AppComponent } from './app.component';
 import { Page404Component } from './components/page404/page404.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {HeaderComponent} from "./components/header/header.component";
-import {ListeRequestComponent} from "./components/fonction/liste-request/liste-request.component";
-import {RequestsModule} from "./components/requests.module";
+import {ListeRoomComponent} from "./components/fonction/liste-room/liste-room.component";
+import {CreerRequestComponent} from "./components/fonction/creer-request/creer-request.component";
+import {AcceptRequestComponent} from "./components/fonction/accept-request/accept-request.component";
+import { CreerRoomComponent } from './components/fonction/creer-room/creer-room.component';
+import {HttpClientModule} from "@angular/common/http";
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListeRequestComponent,
+    ListeRoomComponent,
+    CreerRequestComponent,
+    AcceptRequestComponent,
     Page404Component,
-    HeaderComponent
+    HeaderComponent,
+    CreerRoomComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
   providers: [],

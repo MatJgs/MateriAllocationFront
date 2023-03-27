@@ -1,1 +1,4 @@
-<p>accept-request works!</p>
+<h2>Liste des requêtes</h2>
+<ul>
+  <li *ngFor="let requete of requetes">{{requete.id}} - {{requete.date}} - {{requete.startTime}} - {{requete.endTime}} - {{requete.status}} -  - {{requete.capacity}}</li>
+</ul>

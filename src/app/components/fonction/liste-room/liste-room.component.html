@@ -1,0 +1,6 @@
+
+<h2>Liste des salles</h2><br>
+<a routerLink="/room-create">Add a room</a><br>
+<ul>
+  <li *ngFor="let room of roomList">{{room.id}} - {{room.number}} - {{room.capacity}}</li>
+</ul>

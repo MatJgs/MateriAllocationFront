@@ -5,46 +5,54 @@
   <div class="shape shaping2"></div>
   <div class="shape"></div>
 
-
+<!--  'userlogin':[],-->
+<!--  'justification':[],-->
+<!--  'neededCapacity':[],-->
+<!--  'date':[],-->
+<!--  'beginAt':[],-->
+<!--  'endAt':[],-->
+<!--  'materialId':[],-->
+<!--  'additionalNotes':[]-->
 </div>
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
   <h3>Créer requête</h3>
-  <div class="form-row">
 
-    <label for="name">Nom</label>
-  </div>
-  <div class="form-row">
-    <input  type="text" placeholder="" id="name">
-  </div>
-  <div class="form-row">
+  <label for="name">Nom</label><br>
+  <input  type="text" placeholder="" id="name"><br>
 
-  <label for="capacity">Capacité requise</label>
-  </div>
-  <div class="form-row">
-  <input class="unit" type="number" placeholder="" id="capacity">
-  </div>
 
-  <div class="form-row">
-  <label for="date">Date</label>
-  </div>
-  <div class="form-row">
-  <input class="unit" type="date" id="date"
+  <label for="justification">Justification</label><br>
+  <input  type="text" placeholder="" id="justification"><br>
+
+  <label for="capacity">Capacité requise</label><br>
+  <input  type="number" placeholder="" id="capacity"><br>
+
+
+
+  <label for="date">Date</label><br>
+  <input  type="date" id="date"
          value="2023-03-23"
          min="2023-03-23" max="2023-06-30"
-         required pattern="\d{4}-\d{2}-\d{2}">
-  </div>
-  <div class="form-row">
+         required pattern="\d{4}-\d{2}-\d{2}"><br>
 
+  <div class="form-row">
       <label for="start-time">Starting time</label>
       <label for="end-time">Ending Time</label>
-    </div>
+  </div>
   <div class="form-row">
-  <input class="unit" type="time" id="start-time"
+  <input type="time" id="start-time"
          min="09:00" max="18:00" required>
 
-  <input class="unit" type="time" id="end-time"
+  <input type="time" id="end-time"
          min="09:00" max="18:00" required>
   </div>
+  <br>
+  <label for="material">Matériels</label><br>
+  <select multiple id="material"  >
+    <option [value]="mat.id" *ngFor="let mat of materials">{{mat.name}}</option>
+  </select><br>
+  <label for="note">Note supplémentaire</label><br>
+  <input  type="text" placeholder="" id="note"><br>
 
   <button type="submit">Envoyer</button>
 
