@@ -10,10 +10,10 @@ import {RoomForm} from "../models/room.form";
 export class RoomService {
 
   private readonly BASE_URL = "http://localhost:8080/api/room";
-
+  constructor(private readonly _httpClient: HttpClient) {}
   private _roomsChanged = new BehaviorSubject<undefined>(undefined)
 
-  constructor(private readonly _httpClient: HttpClient) {}
+
 
   get $roomChanged() {
     return this._roomsChanged.asObservable();

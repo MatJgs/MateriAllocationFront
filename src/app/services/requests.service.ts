@@ -15,7 +15,7 @@ export class RequestsService {
     private readonly _http:HttpClient
   ) { }
   getAll(){
-    return this._http.get<Requete[]>(this.apiUrl+'/future');
+    return this._http.get<Requete[]>(this.apiUrl+'/all');
   }
 
   create(form:RequeteForm):Observable<never>{

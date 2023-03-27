@@ -17,7 +17,7 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
   <h3>Créer requête</h3>
 
-  <label for="name">Nom</label><br>
+  <label for="name">Pseudo</label><br>
   <input  type="text" placeholder="" id="name"><br>
 
 
@@ -29,24 +29,20 @@
 
 
 
-  <label for="date">Date</label><br>
-  <input  type="date" id="date"
-         value="2023-03-23"
-         min="2023-03-23" max="2023-06-30"
-         required pattern="\d{4}-\d{2}-\d{2}"><br>
+
 
   <div class="form-row">
-      <label for="start-time">Starting time</label>
-      <label for="end-time">Ending Time</label>
+      <label for="start-time">Date début</label>
+      <label for="end-time">Date fin</label>
   </div>
   <div class="form-row">
-  <input type="time" id="start-time"
+  <input type="datetime-local" id="start-time"
          min="09:00" max="18:00" required>
 
-  <input type="time" id="end-time"
+  <input type="datetime-local" id="end-time"
          min="09:00" max="18:00" required>
   </div>
-  <br>
+
   <label for="material">Matériels</label><br>
   <select multiple id="material"  >
     <option [value]="mat.id" *ngFor="let mat of materials">{{mat.name}}</option>

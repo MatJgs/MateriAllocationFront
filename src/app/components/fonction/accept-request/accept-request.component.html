@@ -1,4 +1,11 @@
 <h2>Liste des requêtes</h2>
+
 <ul>
-  <li *ngFor="let requete of requetes">{{requete.id}} - {{requete.date}} - {{requete.startTime}} - {{requete.endTime}} - {{requete.status}} -  - {{requete.capacity}}</li>
+  <li *ngFor="let requete of requetes">
+    Id <span STYLE="padding:0 0 0 60px;">{{requete.id}}<br></span>
+    Début <span STYLE="padding:0 0 0 30px;">{{requete.beginAt| date: 'dd/MM/yy à HH:mm'}}<br></span>
+    Fin <span STYLE="padding:0 0 0 53px;">{{requete.endAt| date: 'dd/MM/yy à HH:mm'}}<br></span>
+    Statut <span STYLE="padding:0 0 0 32px;">{{requete.currentStatus}}<br></span>
+    Capacité <span STYLE="padding:0 0 0 12px;">{{requete.neededCapacity}}<br></span>
+  </li>
 </ul>

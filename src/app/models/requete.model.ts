@@ -3,10 +3,11 @@ import {Material} from "./material.model";
 
 export interface Requete{
   id:number;
+  justification: string;
   neededMaterials:Material[];
   date:Date;
-  capacity:number;
-  startTime:Date;
-  endTime:Date;
-  status:string;
+  neededCapacity:number;
+  beginAt:Date;
+  endAt:Date;
+  currentStatus:string;
 }
