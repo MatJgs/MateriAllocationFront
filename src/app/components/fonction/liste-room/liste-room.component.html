@@ -1,6 +1,27 @@
 
 <h2>Liste des salles</h2><br>
-<a routerLink="/room-create">Add a room</a><br>
-<ul>
-  <li *ngFor="let room of roomList">{{room.id}} - {{room.number}} - {{room.capacity}}</li>
-</ul>
+<button class="btn btn-primary" routerLink="/room-create">Add a room</button><br>
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">Id</th>
+    <th scope="col">Numéro</th>
+    <th scope="col">Capacité</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let room of roomList">
+    <th scope="row">
+      {{room.id}}
+    </th>
+    <td>
+      {{room.number}}
+    </td>
+    <td>
+      {{room.capacity}}
+    </td>
+  </tr>
+
+  </tbody>
+</table>
+

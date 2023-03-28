@@ -1,9 +1,14 @@
-<h2>Créer une salle</h2>
+
 
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
-  <input type="number" placeholder="number" formControlName="number"/><br>
-  <input type="number" placeholder="capacity" formControlName="capacity"/><br>
-  <input type="checkbox" formControlName="studentAccess"/><label>student access</label><br>
+  <h2>Créer une salle</h2>
+  <label>Nombre</label><br>
+  <input type="number" placeholder="numéro" formControlName="number"/><br>
+  <label>Capacité</label><br>
+  <input type="number" placeholder="capacité" formControlName="capacity"/><br>
+  <label>student access</label>
+  <input type="checkbox" formControlName="studentAccess"/><br>
+  <label>Matériels</label><br>
   <select multiple  formControlName="materialsId">
     <option [value]="mat.id" *ngFor="let mat of materials">{{mat.name}}</option>
   </select><br>
